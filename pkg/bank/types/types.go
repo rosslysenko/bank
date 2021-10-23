@@ -6,6 +6,9 @@ type Money int64
 // Currency represents the currency code
 type Currency string
 
+// Category represents the category of payment
+type Category string
+
 // The currency codes
 const (
 	TJS Currency = "TJS"
@@ -30,8 +33,9 @@ type Card struct {
 
 // Payment represents info about payment oparations
 type Payment struct {
-	ID     int
-	Amount Money
+	ID       int
+	Amount   Money
+	Category Category
 }
 
 type PaymentSource struct {
